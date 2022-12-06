@@ -16,11 +16,6 @@ export function fetchCharacters () {
   axios.get("https://swapi.dev/api/people/")
     
     .then((resp) => {
-    
-
-     
-
-    
       store.charactersList = resp.data.results;
       store.count = resp.data.count;
       store.next=resp.data.next;
