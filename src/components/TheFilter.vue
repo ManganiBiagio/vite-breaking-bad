@@ -1,16 +1,27 @@
 <template lang="">
     <div class="container">
-        <select name="filtroPersonaggi" >
-            <option value="0" selected >Select category</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select>
+        <div>Cerca il tuo personaggio preferito</div>
+        <input type="text"  v-model="nome">
+        <button class="btn btn-primary ms-3" @click="onSearch()">Search</button>
+        
 
     </div>
 </template>
 <script>
+import { store } from '../store';
 export default {
+    data(){
+        return{
+            nome:""
+
+        }
+    },
+    methods:{
+        onSearch(){
+            store.nameSearched=this.nome;
+            this.$emit("search");
+        }
+    }
     
 }
 </script>

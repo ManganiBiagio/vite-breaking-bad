@@ -2,7 +2,7 @@
   <div class="bg-all-page">
   <TheNavbar></TheNavbar>
   <TheLoader v-if="store.loading"></TheLoader>
-  <TheFilter></TheFilter>
+  <TheFilter @search="loadNewContent()"></TheFilter>
   <MainContent></MainContent>
   
 </div>
@@ -27,6 +27,12 @@ export default {
   components:{ TheNavbar, TheFilter, MainContent, TheLoader },
   created(){
     fetchCharacters();
+  },
+  methods:{
+    loadNewContent(){
+      fetchCharacters()
+
+    }
   }
   
 }

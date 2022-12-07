@@ -10,6 +10,7 @@
                     <li>skin color:{{character.skin_color}}</li>
                     <li>eye color:{{character.eye_color}}</li>
                     <li>birth year:{{character.birth_year}}</li>
+                    <li>Gender:{{character.gender}}</li>
                     
 
                </ul>

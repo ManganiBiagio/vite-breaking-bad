@@ -6,14 +6,19 @@ export const store = reactive({
   count: null,
   next:undefined,
   prev:undefined,
-  loading: false
+  loading: false,
+  nameSearched:"",
 });
 
 export function fetchCharacters () {
 
   store.loading = true;
 
-  axios.get("https://swapi.dev/api/people/")
+  axios.get("https://swapi.dev/api/people/",{
+    params:{
+      search:store.nameSearched
+    }
+  })
     
     .then((resp) => {
       store.charactersList = resp.data.results;
