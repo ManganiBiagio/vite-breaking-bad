@@ -20,6 +20,7 @@ export default {
         onSearch(){
             store.nameSearched=this.nome;
             this.$emit("search");
+            
         }
     }
     

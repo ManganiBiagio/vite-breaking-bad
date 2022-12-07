@@ -20,6 +20,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 10;
     span{
         background-color: white;
         padding: 1rem;
