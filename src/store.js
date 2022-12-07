@@ -16,7 +16,11 @@ export function fetchCharacters () {
 
   axios.get("https://swapi.dev/api/people/",{
     params:{
-      search:store.nameSearched
+      search:{
+        name:store.nameSearched,
+        gender:"Male"
+      },
+      
     }
   })
     
